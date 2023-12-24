@@ -1,0 +1,10 @@
+paquete holamundo;
+
+clase pública HolaMundo {
+   HolaMundo público ( ) {
+   }
+
+   public static void main ( Cadena [ ] args ) {
+      System.out.println ( "Hola Mundo" );
+   }
+}
