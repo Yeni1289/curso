@@ -1,0 +1,9 @@
+public class operador{
+  public static void main (string[]args){
+  int a=2;
+  int b=8;
+  int resultado;
+  resultado = a * b;
+  System.out.printl(" la multiplicacion  es  " +resultado);
+  }
+}
