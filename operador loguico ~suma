@@ -1,0 +1,9 @@
+public class operador{
+  public static void main (string[]args){
+  int a=10;
+  int b=5;
+  int resultado;
+  resultado = a + b;
+  System.out.printl(" la suma es  " +resultado);
+  }
+}
