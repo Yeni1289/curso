@@ -1,0 +1,27 @@
+
+package lecturadedatos;
+import java.util.Scanner;
+/**
+ *
+ * @author yeni1289
+ */
+public class LecturaDeDatos {
+
+    public static void main(String[] args) {
+       Scanner s = new Scanner(System.in);
+       
+         System.out.println("Ingresa tu nombre");
+      
+         String Nombre = s.nextLine(); 
+        System.out.println("Tu nombre es: "+ Nombre);
+    
+        System.out.println("Ingresa tu edad: ");
+        
+        int edad = s.nextInt();
+        
+        System.out.println("Tu edad es: " + edad);
+        
+        
+    }
+    
+}
