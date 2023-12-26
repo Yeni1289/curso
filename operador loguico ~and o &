@@ -1,0 +1,12 @@
+puvlic class Operador{
+  public static void main (String[]args){
+     bolean a =5;
+     bolean b=5;
+    bolean resultado ;
+    resultado =(a&& b;
+    System.out.println(resultado);
+
+
+  }
+}
+
