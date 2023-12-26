@@ -1,0 +1,57 @@
+puvlic class sw{
+  public static void main (String[]args){
+     double area;
+    Scaner s=new Scaner(System.in);
+    int respuesta;
+    System.out.println("programa para calcular el area de diferentes figuras);
+    System.out.println("-------------------------------------");
+    System.out.println("            Menu              " );
+    System.out.println("-------------------------------------");
+    System.out.println("1. area del circulo");
+    System.out.println("2. area del cuadrado");
+    System.out.println("3. area del rectangulo ");
+    System.out.println("4. area del triangulo");
+    System.out.println(" Ingresa una opcion ");
+    respuesta =s.nextInt();
+
+    switch(resultado){
+         case 1:
+            double radio;
+            System.out.println("ingresa el radio");
+            radio=s.nextDouble();
+            area=3.1416*(radio*radio);
+            System.out.println("El area del circulo es:"+area);
+            break:
+          case 2:
+            double lado;
+            System.out.println("ingresa el tamaño del lado");
+            lado=s.nextDouble();
+            area=lado*lado);
+            System.out.println("El area del cuadrado es:"+area);
+            break:
+          case 3:
+             double base , altura;
+            System.out.println("ingresa la base");
+            base=s.nextDouble();
+             System.out.println("ingresa la altura");
+            altura=s.nextDouble();
+            area=base*altura);
+            System.out.println("El area del rectangulo es:"+area);
+            break:
+          case 4:
+           double base2 , altura2;
+            System.out.println("ingresa la base");
+            base2=s.nextDouble();
+             System.out.println("ingresa la altura");
+            altura2=s.nextDouble();
+            area=base2*altura2)/2;
+            System.out.println("El area del triangulo es:"+area);
+            break:
+            
+          default:
+           System.out.println("opcion invalida");
+         
+      }
+
+  }
+}
