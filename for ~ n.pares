@@ -1,0 +1,11 @@
+ public class for{
+   public static void main(String[] args){
+   in i;
+   in a=5;
+     for(i=0;i<a;i++){
+        if(i%2==0){
+         System.out.println("el numero"+i"es par");
+        }
+     }
+   }
+}
