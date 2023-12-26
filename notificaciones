@@ -1,0 +1,25 @@
+
+public class Main {
+    public static void main(String[] args) {
+        EsperaNoti en = new EsperaNoti();
+
+        Thread espera = new Thread( () -> {
+            try {
+                en.Esperar();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        } );
+
+        Thread liberar = new Thread( () -> {
+            try {
+                en.Liberar();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        } );
+
+        espera.start();
+        liberar.start();
+    }
+}
