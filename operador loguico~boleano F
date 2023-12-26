@@ -1,0 +1,10 @@
+// evalua la expresion con verdadero o falso 
+public class operador{
+  public static voi main (String[] args){
+    in a=210;
+    in b=678;
+    bolean resultado;
+    resultado=(a!=b);
+    System.out.println(resultado);
+  }
+}
