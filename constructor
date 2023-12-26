@@ -1,0 +1,10 @@
+
+public class Constructores {
+
+    public static void main(String[] args) {
+       // Persona P1 = new Persona("Pedro","Perez","Sanchez",10);
+        Persona P1 = new Persona();
+        P1.ImprimeDatos();
+    }
+    
+}
