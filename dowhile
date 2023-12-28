@@ -1,0 +1,16 @@
+public class dowhile{
+   public static void main(String[] args){
+   in a=6;
+   in b=1;
+    r=0;
+      Scaner s=new Scaner(System.in)
+   do{
+      System.out.println("Quieres continuar");
+        System.out.println("1-->si");
+         System.out.println("2-->no");
+           System.out.println("ingresa tu respuesta");
+          r=s.next.Int();
+  } while(r=/2);
+       System.out.println("Adios");
+     }
+   }
