@@ -1,0 +1,10 @@
+public class while{
+   public static void main(String[] args){
+   in a=2;
+   in b=5;
+   while(a<b){
+      System.out.println("El valor de a es:" +a);
+       a++;
+  } 
+     }
+   }
