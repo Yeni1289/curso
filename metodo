@@ -1,0 +1,93 @@
+public class metodo_funcion{
+   public static void main(String[] args){
+   int r;
+   int a;
+   int b;
+   int respuesta;
+   double resultado;
+   Scaner S= new Scanaer(System.in);
+   do{
+   menu();
+    System.out.println("Ingresa una opcion");
+    r=S.nextInt();
+
+    switch(r){
+       case 1:
+            System.out.println("----Suma----");
+            System.out.println("Ingresa el primer numero");
+            a=S.nextInt();
+            System.out.println("Ingresa el segundo numero");
+             b=S.nextInt();
+             respuesta=suma(a,b);
+              System.out.println(a+"+"+b+"="+resultado);
+             break;
+       case 2:
+            System.out.println("----Resta----");
+            System.out.println("Ingresa el primer numero");
+            a=S.nextInt();
+            System.out.println("Ingresa el segundo numero");
+             b=S.nextInt();
+             respuesta=resta(a,b);
+              System.out.println(a+"-"+b+"="+resultado);
+             break;
+      case 3:
+            System.out.println("----Multiplicacion----");
+            System.out.println("Ingresa el primer numero");
+            a=S.nextInt();
+            System.out.println("Ingresa el segundo numero");
+             b=S.nextInt();
+             respuesta=multiplicacion(a,b);
+              System.out.println(a+"*"+b+"="+resultado);
+             break;
+      case 4:
+            System.out.println("----Divicion----");
+            System.out.println("Ingresa el primer numero");
+            a=S.nextInt();
+            System.out.println("Ingresa el segundo numero");
+             b=S.nextInt();
+             resultado=divicion(a,b);
+              System.out.println(a+"/"+b+"="+resultado);
+             break;
+      case 5:
+            System.out.println("----Adios----");
+        default:
+            System.out.println("Opcion no vlaida");
+            
+    }
+    }while(r!=5);
+
+     }
+     static void menu(){
+     //metodo
+     //solo muestra 
+      System.out.println("-----Menu----");
+       System.out.println("1- Sumar");
+        System.out.println("2- Restar");
+         System.out.println("3- Multiplicar");
+          System.out.println("4- Dividir");
+           System.out.println("5- salir");
+     
+     }
+     //funcion
+     //hace operaciones y espera un resltado
+     static int suma (int a, int b){
+        int resultado;
+        resultado=a+b;
+        return resultado;
+      }
+     static int resta (int a, int b){
+        int resultado;
+        resultado=a-b;
+        return resultado;
+      }
+     static int multiplicacion (int a, int b){
+        int resultado;
+        resultado=a*b;
+        return resultado;
+      }
+     static double divicion (int a, int b){
+        double resultado;
+        resultado=a/b;
+        return resultado;
+     }
+   }
