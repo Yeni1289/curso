@@ -1,0 +1,24 @@
+public class dowhile{
+   public static void main(String[] args){
+   in a=6;
+   in b=5;
+    i=2;
+    r=0;
+    c=0;
+      Scaner s=new Scaner(System.in)
+   System.out.println("Ingresa un numero"); 
+     r=s.next.Int();
+
+   while(i<r)&&(c=0){
+     if((r%1)=0){
+       c++;
+     }
+     i++;
+  }
+     if(c==0){
+       System.out.println("El numero"+r+" es primo");
+     }else{
+        System.out.println("El numero"+r+"no es primo");
+     }
+     }
+   }
