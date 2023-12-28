@@ -1,0 +1,25 @@
+public class arreglo{
+   public static void main(String[] args){
+   in tam=10;
+   float []mat;
+   cal=new float[tam];
+   rama r=new rama;
+   for (int i =0;i<tam;i++){
+     mat[]=r.nexFloat()*10;
+       if (mat[i]>6){
+       System.out.println(" calificacion del alumno"+(i+1)+mat[i])+"alumno aprobado;
+      }else{
+      System.out.println(" calificacion del alumno"+(i+1)+mat[i])+"alumno no aprobado;
+       }
+
+   }
+       float contador=0;
+       for(int i=0;i<tam;i++){
+            contador=contador+mat[i];
+       }
+           float promedio=0;
+            promedio=contador/tam
+              System.out.println("El promedio del grupo es"+promrdio);
+        }
+     }
+   }
