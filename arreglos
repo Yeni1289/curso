@@ -1,0 +1,23 @@
+public class arreglo{
+   public static void main(String[] args){
+   in tam=10;
+  in []array;
+//almacana muchos tipos de datos
+array =new int[tam];
+  array[0]=0;
+   array[1]=1;
+    array[2]=2;
+      array[3]=3;
+        array[4]=4;
+          array[5]=5;
+            array[6]=6;
+              array[7]=7;
+                array[8]=8;
+                   array[9]=9;
+         System.out.println(array[3]);
+        }
+     }
+   }
+}
+0 comments on commit 1813d63
+Comment
