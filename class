@@ -1,0 +1,18 @@
+public class clases{
+   public static void main(String[] args){
+      Scaner s=new Scaner(System.in)
+      alumno A1=new alumno();
+      System.out.println("Ingresa tu nombre(s)"); 
+     A1.Nombre=s.nextLine();
+      System.out.println("Ingresa tu Apellido Paterno"); 
+      A1.ApellidoP=s.nextLine();
+       System.out.println("Ingresa tu Apellido Materno"); 
+       A1.ApellidoM=s.nextLine();
+       System.out.println("Ingresa tu Matricula");
+      A1.Matricula=s.nextLine();
+      System.out.println("Ingresa tu Promedio");
+       A1.Promedio=s.nextFloat();
+      System.out.println("tu nombre es"+" "+A1.ApellidoP++" "+A1.ApellidoM++" "+A1.Nombre);
+
+     }
+   }
