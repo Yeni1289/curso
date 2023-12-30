@@ -1,0 +1,66 @@
+public class sobre carga de datos{
+
+   public static void main{
+    String Nombre;
+    String APaterno;
+    String AMaterno;
+    int edad;
+    public persona(){
+        nombre =null;
+        APaterno=null;
+        AMaterno=null;
+        edad=0;
+    }
+
+
+     public persona(String N){
+        nombre =n;
+        APaterno=null;
+        AMaterno=null;
+        edad=0;
+    }
+
+      
+     public persona(String N,String AP){
+        nombre =n;
+        APaterno=AP;
+        AMaterno=null;
+        edad=0;
+    }
+
+       public persona(String N,String AP,String AM ){
+        nombre =n;
+        APaterno=AP;
+        AMaterno=AM;
+        edad=0;
+    }
+
+
+        public persona(String N,String AP,String AM, int e){
+        nombre =n;
+        APaterno=AP;
+        AMaterno=AM;
+        edad=e;
+    }
+
+
+    public void MuestraDatos(){
+       System.out.println(this.Nombre + " "+this.APaterno+ "  " + this.AMaterno+" " + " su edad es "+ this.edad);
+        persona o1,o2,o3,o4,o5;
+
+
+        o1=new persona ();
+        o2=new persona ("Paco");
+        o3=new persona ("Paco"+" Sanchez");
+        o4=new persona ("Paco"+" Sanchez"+"Hernandez");
+        o5=new persona ("Paco"+" Sanchez"+"Hernandez"+"12");
+
+       o1.MuestraDatos();
+       o2.MuestraDatos();
+       o3.MuestraDatos();
+       o4.MuestraDatos();
+       o5.MuestraDatos();
+
+
+   }
+}
