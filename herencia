@@ -1,0 +1,27 @@
+public class sobrecarga {
+    public  static void main (String[] args){
+
+     static int suma (int a, int b){
+       System.out.println(suma(2,1));
+       System.out.println(suma(2,1,2));
+       System.out.println(suma(2.0f,1.0f));
+       
+     }
+      
+      static int suma (int a , int b){
+        System.out.println("Metodo 1");
+        return a+b;
+      }
+          static int suma (int a , int b,int c){
+        System.out.println("Metodo 2");
+        return a+b+c;
+      }
+      static int suma (int a , int b){
+        System.out.println("Metodo 3");
+        return a+b;
+      }
+    
+        
+    } 
+    
+}
