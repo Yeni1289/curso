@@ -1,0 +1,30 @@
+public class constructor{
+   public static void main(String[] args){
+      String Nombre;
+      String AMaterno;
+      String APaterno;
+      int edad;
+      bolean mayorEded;
+   public Personas(String N. String AP , int e){
+     this.AMaterno=AM;
+     this.Nombre=N;
+     this.APaterno=AP;
+      this.edad=e;
+     mayorEdad=true;
+     
+   }
+
+     public void ImprimeDatos(){
+       if( this.edad >=18){
+          mayorEdad=true;
+       }
+        System.out.println(this,Nombre+" "+this.APaterno+" "+this.AMaterno);
+        System.out.println("Tienes una edad de:"+ this.edad + "años");
+       if ( mayorEdad){
+         System.out.println("Eres mayor de edad");
+       }else{
+           System.out.println("Eres menor de edad");
+         
+      Scaner s=new Scaner(System.in)
+     }
+   }
