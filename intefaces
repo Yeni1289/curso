@@ -1,0 +1,13 @@
+
+public class Intefaces {
+    public static void main(String[] args) {
+       Persona P = new Persona();
+       Animal a = new Animal();
+       
+       P.Desayuno();
+       a.Desayuno();
+       a.Dormido();    
+        System.out.println("Yo debo dormir "+a.horasDormir+" horas");
+    }
+    
+}
