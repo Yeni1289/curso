@@ -14,3 +14,30 @@ public class Persona implements Comer {
     }
 
 }
+
+   
+       A.add("76");
+       
+       A.add("45");
+       A.add("123");
+       A.add("96");
+       
+       
+       Iterator it = A.iterator();
+       
+       hasnext()
+       next()
+       remove()
+       
+        System.out.println("tamaño inicial "+A.size());
+       
+       while(it.hasNext()){
+           System.out.println(it.next());
+           it.remove();
+       }
+       
+       System.out.println("tamaño final "+A.size());
+       
+    }
+    
+}
