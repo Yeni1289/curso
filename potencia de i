@@ -1,0 +1,4 @@
+potencia = 27
+resultado = pow(1j, potencia % 4)  # Calcula el residuo de potencia / 4
+print("i ^", potencia, "=", resultado)
+    
