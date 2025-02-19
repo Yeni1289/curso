@@ -1,0 +1,56 @@
+from fractions import Fraction
+
+class NumeroComplejo3:
+    def __init__(self, real, imag):
+        self.real = real
+        self.imag = imag
+    
+    def suma(self, otro):
+        return NumeroComplejo3(self.real + otro.real, self.imag + otro.imag)
+    
+    def resta(self, otro):
+        return NumeroComplejo3(self.real - otro.real, self.imag - otro.imag)
+    
+    def multiplicacion(self, otro):
+        real_part = self.real * otro.real - self.imag * otro.imag
+        imag_part = self.real * otro.imag + self.imag * otro.real
+        return NumeroComplejo3(real_part, imag_part)
+    
+    def division(self, otro):
+        divisor = otro.real**2 + otro.imag**2
+        real_part = Fraction(self.real * otro.real + self.imag * otro.imag, divisor)
+        imag_part = Fraction(self.imag * otro.real - self.real * otro.imag, divisor)
+        return NumeroComplejo3(real_part, imag_part)
+    
+    def multiplicacion_escalar(self, escalar):
+        real_part = self.real * escalar
+        imag_part = self.imag * escalar
+        return NumeroComplejo3(real_part, imag_part)
+    
+    def __str__(self):
+        if self.imag >= 0:
+            return f"{self.real} + {self.imag}i"
+        else:
+            return f"{self.real} - {-self.imag}i"
+
+# Números complejos
+num1 = NumeroComplejo3(3, +4)
+num2 = NumeroComplejo3(2,-8)
+
+# Multiplicación por escalar
+resultado_multiplicacion1 = num1.multiplicacion_escalar(5)
+resultado_multiplicacion2 = num2.multiplicacion_escalar(3)
+
+# Operaciones usando los resultados de la multiplicación por escalar
+resultado_suma = resultado_multiplicacion1.suma(resultado_multiplicacion2)
+resultado_resta = resultado_multiplicacion1.resta(resultado_multiplicacion2)
+resultado_multiplicacion = resultado_multiplicacion1.multiplicacion(resultado_multiplicacion2)
+resultado_division = resultado_multiplicacion1.division(resultado_multiplicacion2)
+
+# Resultados
+print("Número complejo 1:", resultado_multiplicacion1)
+print("Número complejo 2:", resultado_multiplicacion2)
+print("Suma:", resultado_suma)
+print("Resta:", resultado_resta)
+print("Multiplicación:", resultado_multiplicacion)
+print("División:", resultado_division)
