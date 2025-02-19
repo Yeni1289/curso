@@ -1,0 +1,177 @@
+import javax.swing.JOptionPane;
+
+public class Autobuses {
+    static int totalPasajeros = 0;
+    static int totalDescuentos = 0;
+    static int totalDinero = 0;
+
+    public static void main(String[] args) {
+        System.out.println("---Central de autobuses de Jilotpec-----");
+        byte destino;
+
+        do {
+            destino = Byte.parseByte(JOptionPane.showInputDialog("Ingrese el numero de su destino:\n1. San Francisco\n2. Canalejas\n3. Chapa de mota\n4. Palo alto\n5. Xhixata"));
+
+            
+            switch (destino) {
+                case 1:
+                    rutaSanFrancisco();
+                    break;
+                case 2:
+                    rutaCanalejas();
+                    break;
+                case 3:
+                    rutaChapaDeMota();
+                    break;
+                case 4:
+                    rutaPaloAlto();
+                    break;
+                case 5:
+                    rutaXhixata();
+                    break;
+                default:
+                    System.out.println("Destino no válido");
+            }
+        } while (destino >= 1 && destino <= 5);
+
+        // Verificar si se canceló el menú y mostrar resultados finales
+        if (destino < 1 || destino > 5) {
+            mostrarResultadosFinales();
+        }
+    }
+
+    public static void mostrarResultadosFinales() {
+        // Mostrar resultados finales
+        System.out.println("\nResumen:");
+        System.out.println("Total de pasajeros: " + totalPasajeros);
+        System.out.println("Total de descuentos otorgados: " + totalDescuentos);
+        System.out.println("Total de dinero recaudado: " + totalDinero + " $");
+    }
+
+
+
+    public static void rutaSanFrancisco(){
+        System.out.println("Su destino será Canalejas");
+        int cantidadPersonas = Integer.parseInt(JOptionPane.showInputDialog("¿Cuantas personas van a ese destino?"));
+        totalPasajeros += cantidadPersonas;
+
+        for (int i = 1; i <= cantidadPersonas; i++) {
+            String respuesta = JOptionPane.showInputDialog("¿El pasajero " + i + " es mayor de edad? (true/false)");
+            boolean mayorEdad = Boolean.parseBoolean(respuesta);
+
+            int costoPasaje = 15;
+
+            if (mayorEdad) {
+                System.out.println("El pasajero " + i + " recibirá un descuento del 15 %");
+                totalDescuentos++;
+                costoPasaje = (int) (costoPasaje * 0.85); // Aplica el descuento
+            } else {
+                System.out.println("El pasajero " + i + " no es mayor de edad y no recibe descuento.");
+            }
+
+            totalDinero += costoPasaje; // Añadir el costo al total de dinero
+            System.out.println("El costo de su pasaje será " + costoPasaje + " $ .");
+        }
+    }
+  
+    public static void rutaCanalejas() {
+        System.out.println("Su destino será Canalejas");
+        int cantidadPersonas = Integer.parseInt(JOptionPane.showInputDialog("¿Cuantas personas van a ese destino?"));
+       // totalPasajeros += cantidadPersonas;
+
+        for (int i = 1; i <= cantidadPersonas; i++) {
+            String respuesta = JOptionPane.showInputDialog("¿El pasajero " + i + " es mayor de edad? (true/false)");
+            boolean mayorEdad = Boolean.parseBoolean(respuesta);
+
+            int costoPasaje = 15;
+
+            if (mayorEdad) {
+                System.out.println("El pasajero " + i + " recibirá un descuento del 15 %");
+                //totalDescuentos++;
+                costoPasaje = (int) (costoPasaje * 0.85); // Aplica el descuento
+            } else {
+                System.out.println("El pasajero " + i + " no es mayor de edad y no recibe descuento.");
+            }
+
+           totalDinero += costoPasaje; // Añadir el costo al total de dinero
+            System.out.println("El costo de su pasaje será " + costoPasaje + " $ .");
+        }
+    }
+
+    public static void rutaChapaDeMota() {
+        System.out.println("Su destino será Chapa de mota");
+        int cantidadPersonas = Integer.parseInt(JOptionPane.showInputDialog("¿Cuantas personas van a ese destino?"));
+        totalPasajeros += cantidadPersonas;
+
+        for (int i = 1; i <= cantidadPersonas; i++) {
+            String respuesta = JOptionPane.showInputDialog("¿El pasajero " + i + " es mayor de edad? (true/false)");
+            boolean mayorEdad = Boolean.parseBoolean(respuesta);
+
+            int costoPasaje = 15;
+
+            if (mayorEdad) {
+                System.out.println("El pasajero " + i + " recibirá un descuento del 15 %");
+                totalDescuentos++;
+                costoPasaje = (int) (costoPasaje * 0.85); // Aplica el descuento
+            } else {
+                System.out.println("El pasajero " + i + " no es mayor de edad y no recibe descuento.");
+            }
+
+           totalDinero += costoPasaje; // Añadir el costo al total de dinero
+            System.out.println("El costo de su pasaje será " + costoPasaje + " $ .");
+        }
+    }
+
+    public static void rutaPaloAlto() {
+
+        System.out.println("Su destino será Palo alto");
+        int cantidadPersonas = Integer.parseInt(JOptionPane.showInputDialog("¿Cuantas personas van a ese destino?"));
+        totalPasajeros += cantidadPersonas;
+
+        for (int i = 1; i <= cantidadPersonas; i++) {
+            String respuesta = JOptionPane.showInputDialog("¿El pasajero " + i + " es mayor de edad? (true/false)");
+            boolean mayorEdad = Boolean.parseBoolean(respuesta);
+
+            int costoPasaje = 15;
+
+            if (mayorEdad) {
+                System.out.println("El pasajero " + i + " recibirá un descuento del 15 %");
+                totalDescuentos++;
+                costoPasaje = (int) (costoPasaje * 0.85); // Aplica el descuento
+            } else {
+                System.out.println("El pasajero " + i + " no es mayor de edad y no recibe descuento.");
+            }
+
+            totalDinero += costoPasaje; // Añadir el costo al total de dinero
+            System.out.println("El costo de su pasaje será " + costoPasaje + " $ .");
+        }
+ 
+    }
+
+    public static void rutaXhixata() {
+
+        System.out.println("Su destino será Xhixata");
+        int cantidadPersonas = Integer.parseInt(JOptionPane.showInputDialog("¿Cuantas personas van a ese destino?"));
+       totalPasajeros += cantidadPersonas;
+
+        for (int i = 1; i <= cantidadPersonas; i++) {
+            String respuesta = JOptionPane.showInputDialog("¿El pasajero " + i + " es mayor de edad? (true/false)");
+            boolean mayorEdad = Boolean.parseBoolean(respuesta);
+
+            int costoPasaje = 15;
+
+            if (mayorEdad) {
+                System.out.println("El pasajero " + i + " recibirá un descuento del 15 %");
+                totalDescuentos++;
+                costoPasaje = (int) (costoPasaje * 0.85); // Aplica el descuento
+            } else {
+                System.out.println("El pasajero " + i + " no es mayor de edad y no recibe descuento.");
+            }
+
+            totalDinero += costoPasaje; // Añadir el costo al total de dinero
+            System.out.println("El costo de su pasaje será " + costoPasaje + " $ .");
+        }
+    }
+
+}
+
