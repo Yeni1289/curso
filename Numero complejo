@@ -1,0 +1,38 @@
+import cmath
+
+class NumeroComplejo:
+    def __init__(self, real, imag):
+        self.real = real
+        self.imag = imag
+    
+    def suma(self, otro):
+        return NumeroComplejo(self.real + otro.real, self.imag + otro.imag)
+    
+    def resta(self, otro):
+        return NumeroComplejo(self.real - otro.real, self.imag - otro.imag)
+    
+    def multiplicacion(self, otro):
+        real_part = self.real * otro.real - self.imag * otro.imag
+        imag_part = self.real * otro.imag + self.imag * otro.real
+        return NumeroComplejo(real_part, imag_part)
+    
+    def division(self, otro):
+        divisor = otro.real**2 + otro.imag**2
+        real_part = (self.real * otro.real + self.imag * otro.imag) / divisor
+        imag_part = (self.imag * otro.real - self.real * otro.imag) / divisor
+        return NumeroComplejo(real_part, imag_part)
+    
+    def __str__(self):
+        if self.imag >= 0:
+            return f"{self.real} + {self.imag}i"
+        else:
+            return f"{self.real} - {-self.imag}i"
+
+# Ejemplo de uso
+num1 = NumeroComplejo(2, +1)
+num2 = NumeroComplejo(-2, -1)
+print(num1)
+print(num2)
+print("Suma:", num1.suma(num2))
+print("Resta:", num1.resta(num2))
+print("Multiplicación:", num1.multiplicacion(num2))
