@@ -1,0 +1,96 @@
+import tkinter as tk
+
+def convertir():
+    entrada = entrada_text.get()
+    sistema_origen = sistema_origen_var.get()
+    sistema_destino = sistema_destino_var.get()
+    
+    try:
+        resultado = ""
+        # Condicionar sistema origen
+        if sistema_origen == "Decimal":
+            decimal = int(entrada)
+            #condicional para los otros sitemas
+            if sistema_destino == "Decimal":
+                resultado = str(decimal)
+            elif sistema_destino == "Binario":
+                resultado = bin(decimal)[2:]
+            elif sistema_destino == "Octal":
+                resultado = oct(decimal)[2:]
+            elif sistema_destino == "Hexadecimal":
+                resultado = hex(decimal)[2:].upper()
+        elif sistema_origen == "Binario":
+            decimal = int(entrada, 2)
+            if sistema_destino == "Decimal":
+                resultado = str(decimal)
+            elif sistema_destino == "Binario":
+                resultado = entrada
+            elif sistema_destino == "Octal":
+                resultado = oct(decimal)[2:]
+            elif sistema_destino == "Hexadecimal":
+                resultado = hex(decimal)[2:].upper()
+        elif sistema_origen == "Octal":
+            decimal = int(entrada, 8)
+            if sistema_destino == "Decimal":
+                resultado = str(decimal)
+            elif sistema_destino == "Binario":
+                resultado = bin(decimal)[2:]
+            elif sistema_destino == "Octal":
+                resultado = entrada
+            elif sistema_destino == "Hexadecimal":
+                resultado = hex(decimal)[2:].upper()
+        elif sistema_origen == "Hexadecimal":
+            decimal = int(entrada, 16)
+            if sistema_destino == "Decimal":
+                resultado = str(decimal)
+            elif sistema_destino == "Binario":
+                resultado = bin(decimal)[2:]
+            elif sistema_destino == "Octal":
+                resultado = oct(decimal)[2:]
+            elif sistema_destino == "Hexadecimal":
+                resultado = entrada.upper()
+
+        resultado_label.config(text="Resultado: " + resultado)
+    except ValueError:
+        resultado_label.config(text="Entrada no válida")
+def cerrar():
+    ventana.destroy()
+# Crear una ventana principal
+ventana = tk.Tk()
+ventana.title("Calculadora de Conversión de Sistemas Numéricos")
+
+# Etiqueta para mostrar el resultado
+resultado_label = tk.Label(ventana, text="", font=("Helvetica", 14))
+resultado_label.pack(pady=10)
+
+# Campo de entrada
+entrada_label = tk.Label(ventana, text="Ingrese un número:")
+entrada_label.pack()
+entrada_text = tk.Entry(ventana)
+entrada_text.pack()
+
+# Opciones para seleccionar el sistema numérico de origen y destino
+sistema_origen_var = tk.StringVar()
+sistema_destino_var = tk.StringVar()
+
+sistemas_numericos = ["Decimal", "Binario", "Octal", "Hexadecimal"]
+sistema_origen_label = tk.Label(ventana, text="Sistema de origen:")
+sistema_origen_label.pack()
+sistema_origen_menu = tk.OptionMenu(ventana, sistema_origen_var, *sistemas_numericos)
+sistema_origen_menu.pack()
+
+sistema_destino_label = tk.Label(ventana, text="Sistema de destino:")
+sistema_destino_label.pack()
+sistema_destino_menu = tk.OptionMenu(ventana, sistema_destino_var, *sistemas_numericos)
+sistema_destino_menu.pack()
+
+# Botón para realizar la conversión
+convertir_button = tk.Button(ventana, text="Convertir", command=convertir)
+convertir_button.pack(pady=10)
+cerrar_boton =  tk.Button(ventana, text='cerrar', command=cerrar)
+cerrar_boton.pack(pady=15)
+#Ventana principal
+ventana.mainloop()
+
+
+
